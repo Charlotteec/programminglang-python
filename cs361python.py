@@ -169,10 +169,21 @@ def concat(A):
 print(concat([[1,2,3],[3,2,1],[2]]))
 
 #EXERCIES 10
-#
-# x = np.arange(0, 10, 0.2)
-# y = np.sin(x-2)**2 * np.exp(-x*x)
-# plt.plot(x,y)
+import matplotlib.pyplot as plt
+import numpy as np
+
+def f(x):
+  return(np.sin(x-2)**2)*(np.e**(-x**2))
+
+x = np.arange(0.0, 2.0, 0.01)
+y = f(x)
+
+plt.plot(x,y)
+plt.xlabel('x-axis')
+plt.ylabel('y-axis')
+plt.title("f(x)= sin^2(x-2) * e^-x^-2")
+plt.grid(True)
+plt.show()
 
 #EXERCISE 11
 def product_loop(l):
